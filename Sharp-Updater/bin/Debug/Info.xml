@@ -17,6 +17,15 @@
     along with Sharp-Updater. If not, see <http://www.gnu.org/licenses/>.
 -->
 <root>
+<!--
+	TIP!
+	
+	Think you made a mistake on this file. Open the file up in a webbrowser.
+	I'd recommend Firefox or IE.
+	
+	If there are no errors, the webbrowser should display everything execpt these
+	comments. If there are errors, it'll usually tell you where.
+-->
 <!-- Where you uploaded Update.xml -->
 <updatexml>http://anthony-lomeli.co.cc/NotepadS/Update.xml</updatexml>
 <!-- The version number of the software Sharp-Updater came with -->

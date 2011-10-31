@@ -20,6 +20,7 @@ namespace Sharp_Updater
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            button3.Visible = false;
             XmlDocument current = new XmlDocument();
             current.Load(Environment.CurrentDirectory + @"\Info.xml");
             XmlNodeList ver1 = current.GetElementsByTagName("Installedversion");
@@ -47,28 +48,64 @@ namespace Sharp_Updater
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        public void download_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+        {
+            double bytesIn = double.Parse(e.BytesReceived.ToString());
+            double totalBytes = double.Parse(e.TotalBytesToReceive.ToString());
+            double percentage = bytesIn / totalBytes * 100;
+            progressBar1.Value = int.Parse(Math.Truncate(percentage).ToString());
+        }
+
+        public void download_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
             XmlDocument current = new XmlDocument();
             current.Load(Environment.CurrentDirectory + @"\Info.xml");
             XmlNodeList pro = current.GetElementsByTagName("ProgramName");
             string prog = pro[0].InnerText;
+            MessageBox.Show("Update has been downloaded sucessfully. Please Close all instances of " + prog + " while update is in session.");
+            System.Diagnostics.Process.Start(@"\update.exe");
+            Application.Exit();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            button3.Visible = true;
+            button1.Enabled = false;
+            XmlDocument current = new XmlDocument();
+            current.Load(Environment.CurrentDirectory + @"\Info.xml");
+            XmlNodeList pro = current.GetElementsByTagName("ProgramName");
+            string prog = pro[0].InnerText;
             XmlDocument updater = new XmlDocument();
-            updater.Load("http://anthony-lomeli.co.cc/NotepadS/Update1.xml");
+            updater.Load("http://anthony-lomeli.co.cc/NotepadS/Update.xml");
             XmlNodeList down = updater.GetElementsByTagName("InstallerURL");
             string install = down[0].InnerText;
             WebClient download = new WebClient();
             label1.Text = "Downloading update for " + prog + ".";
             label2.Text = "Please wait...";
-            download.DownloadFile(install, @"\update.exe");
-            MessageBox.Show("Please Close all instances of " + prog + " while update is in session.");
-            System.Diagnostics.Process.Start(@"\update.exe");
-            Application.Exit();
+            download.DownloadProgressChanged += new DownloadProgressChangedEventHandler(download_DownloadProgressChanged);
+            download.DownloadFileCompleted += new AsyncCompletedEventHandler(download_DownloadFileCompleted);
+            button2.Enabled = false;
+            if (System.IO.File.Exists(@"\update.exe") == false)
+            {
+                download.DownloadFileAsync(new Uri(install), (@"\update.exe"));
+            }
+            else if (System.IO.File.Exists(@"\update.exe" ) == true)
+            {
+                System.IO.File.Delete(@"\update.exe");
+                download.DownloadFileAsync(new Uri(install), (@"\update.exe"));
+            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
     }
 }

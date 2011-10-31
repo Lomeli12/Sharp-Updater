@@ -8,7 +8,7 @@ The aim of Sharp-Updater is to provide a ready to use and configurable updater w
 
 Sharp-Updater was created for the upcoming Notepad# project. I wanted to use GUP, just like Notepad++, but decided “What the hell” and made my own updater in C# based off of GUP.
 
-Just like GUP, Sharp-Updater has be programmed so that anyone can use it with there programs by just editing two files. It’s also licensed under the LGPL.
+Just like GUP, Sharp-Updater has be programmed so that anyone can use it with there programs by just editing two files. It has a tiny footprint(though not as tiny as GUP). It’s also licensed under the LGPL.
 
 ------How does Sharp-Updater work?------
 
@@ -29,7 +29,6 @@ All you have to do is point Sharp-Updater to your url update page (by modifying 
 
     - Noticeable smaller. Sharp-Updater is only 12KB(Sharp-Updater and Info.XML), while GUP is 390KB(GUP, gup.xml, libcurl.dll)
 	- Doesn't use an extra DLL
-    - Smaller footprint
     - Written in C# as opposed to C++
 
 ------Who & whom------
@@ -42,3 +41,7 @@ So if you run a commercial or open a source project under MS Windows and you rel
 To whom should you say “thank you”?
 
 Anthony Lomeli
+
+------NOTE------
+
+When you upload and Update.xml, give it a few minutes to update worldwide. Just like anything you upload via FTP, many programs(including Sharp-Updater) won't notice the change for a while.
