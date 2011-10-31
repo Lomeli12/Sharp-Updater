@@ -7,3 +7,4 @@ c:\users\anthony\documents\visual studio 2010\Projects\C#\Sharp-Updater\obj\x86\
 c:\users\anthony\documents\visual studio 2010\Projects\C#\Sharp-Updater\obj\x86\Debug\GenerateResource.write.1.tlog
 c:\users\anthony\documents\visual studio 2010\Projects\C#\Sharp-Updater\obj\x86\Debug\Sharp-Updater.exe
 c:\users\anthony\documents\visual studio 2010\Projects\C#\Sharp-Updater\obj\x86\Debug\Sharp-Updater.pdb
+C:\Users\Anthony\documents\visual studio 2010\Projects\C#\Sharp-Updater\bin\Debug\Sharp-Updater.exe.config
