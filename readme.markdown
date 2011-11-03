@@ -17,7 +17,7 @@ An updater I made in C# based off of [GUP](http://gup-win32.tuxfamily.org/). It 
 ## System Requirements
 
 	1. Windows XP SP3, Windows Server 2003 SP2, Windows Vista SP1 or later, Windows Server 2008, Windows 7, Windows Server 2008 R2, Windows 7 SP1, Windows Server 2008 R2 SP1, or Windows 8 Developer's Preview.
-	2. Microsoft .NET Framework 4.0 or higher. Get it here: http://bit.ly/MicrosoftDotNet4
+	2. Microsoft .NET Framework 3.5 or higher. Get .NET 3.5 here: http://bit.ly/MicrosoftDotNet3-5 Get .NET 4.0 here(**Recommended**): http://bit.ly/MicrosoftDotNet4
 	3. Internet Connection for Updates
 	
 ## Help:

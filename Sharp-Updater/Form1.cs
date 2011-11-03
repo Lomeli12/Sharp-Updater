@@ -38,11 +38,13 @@ namespace Sharp_Updater
             {
                 label1.Text = "There is a new update for " + prog + ".";
                 label2.Text = "Would you like to download it?";
+                label3.Text = "Installed Version: " + cversion + " Latest Version: " + newversion;
             }
             else if (cversion == newversion)
             {
                 label1.Text = "There are no new updates for " + prog + ".";
-                label2.Text = "";
+                label2.Visible = false;
+                label3.Visible = false;
                 button2.Visible = false;
                 button1.Text = "Close";
             }
@@ -58,41 +60,50 @@ namespace Sharp_Updater
 
         public void download_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
+            string path = System.IO.Path.GetTempPath();
             XmlDocument current = new XmlDocument();
             current.Load(Environment.CurrentDirectory + @"\Info.xml");
             XmlNodeList pro = current.GetElementsByTagName("ProgramName");
             string prog = pro[0].InnerText;
             MessageBox.Show("Update has been downloaded sucessfully. Please Close all instances of " + prog + " while update is in session.");
-            System.Diagnostics.Process.Start(@"\update.exe");
+            System.Diagnostics.Process.Start(path + @"\update.exe");
             Application.Exit();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            string path = System.IO.Path.GetTempPath();
             button3.Visible = true;
             button1.Enabled = false;
             XmlDocument current = new XmlDocument();
             current.Load(Environment.CurrentDirectory + @"\Info.xml");
+            XmlNodeList update = current.GetElementsByTagName("updatexml");
             XmlNodeList pro = current.GetElementsByTagName("ProgramName");
+            XmlNodeList ver1 = current.GetElementsByTagName("Installedversion");
+            string inversion = ver1[0].InnerText;
+            string updateurl = update[0].InnerText;
             string prog = pro[0].InnerText;
             XmlDocument updater = new XmlDocument();
-            updater.Load("http://anthony-lomeli.co.cc/NotepadS/Update.xml");
+            updater.Load(updateurl);
             XmlNodeList down = updater.GetElementsByTagName("InstallerURL");
+            XmlNodeList ver2 = updater.GetElementsByTagName("LatestVersion");
+            string newversion = ver2[0].InnerText;
             string install = down[0].InnerText;
             WebClient download = new WebClient();
             label1.Text = "Downloading update for " + prog + ".";
             label2.Text = "Please wait...";
+            label3.Text = "Downloading Version " + newversion + " installer. ";
             download.DownloadProgressChanged += new DownloadProgressChangedEventHandler(download_DownloadProgressChanged);
             download.DownloadFileCompleted += new AsyncCompletedEventHandler(download_DownloadFileCompleted);
             button2.Enabled = false;
-            if (System.IO.File.Exists(@"\update.exe") == false)
+            if (System.IO.File.Exists(path + @"\update.exe") == false)
             {
-                download.DownloadFileAsync(new Uri(install), (@"\update.exe"));
+                download.DownloadFileAsync(new Uri(install), (path + @"\update.exe"));
             }
-            else if (System.IO.File.Exists(@"\update.exe" ) == true)
+            else if (System.IO.File.Exists(path + @"\update.exe" ) == true)
             {
-                System.IO.File.Delete(@"\update.exe");
-                download.DownloadFileAsync(new Uri(install), (@"\update.exe"));
+                System.IO.File.Delete(path + @"\update.exe");
+                download.DownloadFileAsync(new Uri(install), (path + @"\update.exe"));
             }
             
         }
