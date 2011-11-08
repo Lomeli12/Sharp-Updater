@@ -4,7 +4,7 @@ _By Anthony Lomeli_
 
 ## Source Version:
 
-Version: 1.1
+Version: 1.2
 
 ## Credits & License:
 

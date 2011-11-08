@@ -1,0 +1,10 @@
+Changelog
+
+v1.2
+- Add support for non-exe installlers.
+
+v1.1
+- Fixed stupid typo that made Sharp-Updater useless to everyone except me.
+
+v1.0
+- Finished the first build of Sharp-Updater in 1 hour.

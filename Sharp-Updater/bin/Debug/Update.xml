@@ -28,6 +28,8 @@
 -->
 <!-- Place the version number for latest version of your software here. -->
 <LatestVersion>1.0</LatestVersion>
-<!-- Place the download link for the installer of the newest version of your software here. -->
-<InstallerURL>http://7log.googlecode.com/files/7Log%203.5%20Setup.exe</InstallerURL>
+<!-- Place the server location for the installer of the newest version of your software here. -->
+<InstallerURL>http://7log.googlecode.com/files/</InstallerURL>
+<!-- Place the actual name of the installer here. -->
+<InstallerNAME>7Log%203.5%20Setup.exe</InstallerNAME>
 </root>

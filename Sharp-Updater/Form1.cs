@@ -64,9 +64,15 @@ namespace Sharp_Updater
             XmlDocument current = new XmlDocument();
             current.Load(Environment.CurrentDirectory + @"\Info.xml");
             XmlNodeList pro = current.GetElementsByTagName("ProgramName");
+            XmlNodeList update = current.GetElementsByTagName("updatexml");
             string prog = pro[0].InnerText;
+            string updateurl = update[0].InnerText;
+            XmlDocument updater = new XmlDocument();
+            updater.Load(updateurl);
+            XmlNodeList load = updater.GetElementsByTagName("InstallerNAME");
+            string installer = load[0].InnerText;
             MessageBox.Show("Update has been downloaded sucessfully. Please Close all instances of " + prog + " while update is in session.");
-            System.Diagnostics.Process.Start(path + @"\update.exe");
+            System.Diagnostics.Process.Start(path + installer);
             Application.Exit();
         }
 
@@ -86,9 +92,11 @@ namespace Sharp_Updater
             XmlDocument updater = new XmlDocument();
             updater.Load(updateurl);
             XmlNodeList down = updater.GetElementsByTagName("InstallerURL");
+            XmlNodeList load = updater.GetElementsByTagName("InstallerNAME");
             XmlNodeList ver2 = updater.GetElementsByTagName("LatestVersion");
             string newversion = ver2[0].InnerText;
-            string install = down[0].InnerText;
+            string installer = load[0].InnerText;
+            string install = down[0].InnerText + load[0].InnerText;
             WebClient download = new WebClient();
             label1.Text = "Downloading update for " + prog + ".";
             label2.Text = "Please wait...";
@@ -96,14 +104,14 @@ namespace Sharp_Updater
             download.DownloadProgressChanged += new DownloadProgressChangedEventHandler(download_DownloadProgressChanged);
             download.DownloadFileCompleted += new AsyncCompletedEventHandler(download_DownloadFileCompleted);
             button2.Enabled = false;
-            if (System.IO.File.Exists(path + @"\update.exe") == false)
+            if (System.IO.File.Exists(path + installer) == false)
             {
-                download.DownloadFileAsync(new Uri(install), (path + @"\update.exe"));
+                download.DownloadFileAsync(new Uri(install), (path + installer));
             }
-            else if (System.IO.File.Exists(path + @"\update.exe" ) == true)
+            else if (System.IO.File.Exists(path + installer) == true)
             {
-                System.IO.File.Delete(path + @"\update.exe");
-                download.DownloadFileAsync(new Uri(install), (path + @"\update.exe"));
+                System.IO.File.Delete(path + installer);
+                download.DownloadFileAsync(new Uri(install), (path + installer));
             }
             
         }
