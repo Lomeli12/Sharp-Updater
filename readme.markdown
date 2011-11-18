@@ -2,6 +2,10 @@ Sharp-Updater
 =============
 _By Anthony Lomeli_
 
+## Some News for Linux users:
+
+I am currently developing on a port of Sharp-Updater for Linux using Mono. Be sure to check back regularly for this update! :D
+
 ## Source Version:
 
 Version: 1.2
