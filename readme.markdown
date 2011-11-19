@@ -35,6 +35,7 @@ An updater I made in C# based off of [GUP](http://gup-win32.tuxfamily.org/). It 
 3. Internet Connection for Updates
 	
 **Linux**
+
 1. [Mono](http://www.go-mono.com/mono-downloads/download.html)
 2. Internet Connection for Updates
 	
