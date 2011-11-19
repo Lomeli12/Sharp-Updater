@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sharp-Updater-Linux", "Sharp-Updater-Linux\Sharp-Updater-Linux.csproj", "{AC0F00DF-C51D-4754-AF65-BC3518CD3F69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC0F00DF-C51D-4754-AF65-BC3518CD3F69}.Debug|x86.ActiveCfg = Debug|x86
+		{AC0F00DF-C51D-4754-AF65-BC3518CD3F69}.Debug|x86.Build.0 = Debug|x86
+		{AC0F00DF-C51D-4754-AF65-BC3518CD3F69}.Release|x86.ActiveCfg = Release|x86
+		{AC0F00DF-C51D-4754-AF65-BC3518CD3F69}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Sharp-Updater-Linux\Sharp-Updater-Linux.csproj
+	EndGlobalSection
+EndGlobal

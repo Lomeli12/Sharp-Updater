@@ -1,5 +1,7 @@
 Changelog
 
+11/18/2011 Linux Version created
+
 v1.2
 - Add support for non-exe installlers.
 

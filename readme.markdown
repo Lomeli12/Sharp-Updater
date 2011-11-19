@@ -4,7 +4,15 @@ _By Anthony Lomeli_
 
 ## Some News for Linux users:
 
-I am currently developing on a port of Sharp-Updater for Linux using Mono. Be sure to check back regularly for this update! :D
+Sharp-Updater-Linux is now avaliable. It works exactly the same as the Windows version, with a few exceptions:
+
+	1. Has a "Check for Updates" button(IDK how to get to check on loading)
+	2. Progress bar is there, but not working at this moment
+	3. You'll need [MonoDevelop](http://monodevelop.com/) and [GTK#](http://www.mono-project.com/GtkSharp) to complie from source
+
+Other than that, it uses the same XML Files and Nodes as the Windows version. So, have fun!
+	
+Sharp-Updater-Linux Progress: 90% Done, Usable
 
 ## Source Version:
 
@@ -20,9 +28,15 @@ An updater I made in C# based off of [GUP](http://gup-win32.tuxfamily.org/). It 
 
 ## System Requirements
 
+**Windows**
+
 	1. Windows XP SP3, Windows Server 2003 SP2, Windows Vista SP1 or later, Windows Server 2008, Windows 7, Windows Server 2008 R2, Windows 7 SP1, Windows Server 2008 R2 SP1, or Windows 8 Developer's Preview.
 	2. Microsoft .NET Framework 3.5 or higher. Get .NET 3.5 here: http://bit.ly/MicrosoftDotNet3-5 Get .NET 4.0 here(Recommended): http://bit.ly/MicrosoftDotNet4
 	3. Internet Connection for Updates
+	
+**Linux**
+	1. Mono http://www.go-mono.com/mono-downloads/download.html
+	2. Internet Connection for Updates
 	
 ## Help:
 
