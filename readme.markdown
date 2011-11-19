@@ -8,7 +8,7 @@ Sharp-Updater-Linux is now avaliable. It works exactly the same as the Windows v
 
 1. Has a "Check for Updates" button(IDK how to get to check on loading)
 2. Progress bar is there, but not working at this moment
-3. You'll need [MonoDevelop](http://monodevelop.com/) and [GTK#](http://www.mono-project.com/GtkSharp) to complie from source
+3. You'll need [MonoDevelop](http://monodevelop.com/) and [GTK#](http://www.mono-project.com/GtkSharp) to compile from source
 
 Other than that, it uses the same XML Files and Nodes as the Windows version. So, have fun!
 	
