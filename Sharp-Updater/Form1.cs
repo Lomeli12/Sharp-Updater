@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml;
@@ -22,28 +19,28 @@ namespace Sharp_Updater
         {
             button3.Visible = false;
             XmlDocument current = new XmlDocument();
-            current.Load(Environment.CurrentDirectory + @"\Info.xml");
-            XmlNodeList ver1 = current.GetElementsByTagName("Installedversion");
-            XmlNodeList update = current.GetElementsByTagName("updatexml");
-            XmlNodeList pro = current.GetElementsByTagName("ProgramName");
-            string prog = pro[0].InnerText;
-            string up1 = update[0].InnerText;
-            string cversion = ver1[0].InnerText;
-            XmlDocument updater = new XmlDocument();
-            updater.Load(up1);
-            XmlNodeList ver2 = updater.GetElementsByTagName("LatestVersion");
-            string newversion = ver2[0].InnerText;
+	        current.Load(Environment.CurrentDirectory + @"\Info.xml");
+	        XmlNodeList ver1 = current.GetElementsByTagName("Installedversion");
+	        XmlNodeList update = current.GetElementsByTagName("updatexml");
+	        XmlNodeList pro = current.GetElementsByTagName("ProgramName");
+	        string prog = pro[0].InnerText;
+	        string up1 = update[0].InnerText;
+            double cversion = double.Parse(ver1[0].InnerText);
+	        XmlDocument updater = new XmlDocument();
+	        updater.Load(up1);
+	        XmlNodeList ver2 = updater.GetElementsByTagName("LatestVersion");
+        	double newversion = double.Parse(ver2[0].InnerText);
             this.Text = prog + " Updater";
-            if (cversion != newversion)
+            if (cversion < newversion)
             {
                 label1.Text = "There is a new update for " + prog + ".";
                 label2.Text = "Would you like to download it?";
                 label3.Text = "Installed Version: " + cversion + " Latest Version: " + newversion;
             }
-            else if (cversion == newversion)
+            else if (cversion >= newversion)
             {
                 label1.Text = "There are no new updates for " + prog + ".";
-                label2.Visible = false;
+                label2.Text = "Installed Version: " + cversion;
                 label3.Visible = false;
                 button2.Visible = false;
                 button1.Text = "Close";
@@ -123,6 +120,7 @@ namespace Sharp_Updater
 
         private void button3_Click(object sender, EventArgs e)
         {
+            
             Application.Exit();
         }
 

@@ -30,12 +30,12 @@ public partial class MainWindow: Gtk.Window
 		XmlNodeList pro = current.GetElementsByTagName("ProgramName");
 		string prog = pro[0].InnerText;
 		string up1 = update[0].InnerText;
-		string cversion = ver1[0].InnerText;
+		double cversion = double.Parse(ver1[0].InnerText);
 		XmlDocument updater = new XmlDocument();
 		updater.Load(up1);
 		XmlNodeList ver2 = updater.GetElementsByTagName("LatestVersion");
-		string newversion = ver2[0].InnerText;
-		if (cversion != newversion)
+		double newversion = double.Parse(ver2[0].InnerText);
+		if (cversion < newversion)
 		{
 			label2.Text = "There is a new update for " + prog + ".";
 			label3.Text = "Would you like to download it?";
@@ -43,7 +43,7 @@ public partial class MainWindow: Gtk.Window
 			button2.Visible = true;
 			button3.Label = "No";
 		}
-		else if (cversion == newversion)
+		else if (cversion >= newversion)
 		{
 			label2.Text = "There are no new updates for " + prog + ".";
 			button4.Visible = false;
@@ -55,7 +55,9 @@ public partial class MainWindow: Gtk.Window
 		double bytesIn = double.Parse(e.BytesReceived.ToString());
 		double totalBytes = double.Parse(e.TotalBytesToReceive.ToString());
 		double percentage = bytesIn / totalBytes * 100;
-		progressbar1.Fraction = int.Parse(Math.Truncate(percentage).ToString());
+		double downloaded = bytesIn / 1024;
+		double max = totalBytes / 1024;
+		label1.Text = Math.Round(downloaded, 2) + "KB of " + Math.Round(max, 2) +"KB downloaded.";
 	}
 	
 	public void download_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)

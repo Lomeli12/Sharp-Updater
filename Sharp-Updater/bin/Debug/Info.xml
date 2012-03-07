@@ -27,9 +27,9 @@
 	comments. If there are errors, it'll usually tell you where.
 -->
 <!-- Where you uploaded Update.xml -->
-<updatexml>http://anthony-lomeli.co.cc/NotepadS/Update.xml</updatexml>
+<updatexml>https://raw.github.com/Lomeli12/Sharp-Updater/master/Sharp-Updater/bin/Debug/Update.xml</updatexml>
 <!-- The version number of the software Sharp-Updater came with -->
-<Installedversion>0.1</Installedversion>
+<Installedversion>1.1</Installedversion>
 <!-- The name of your software -->
 <ProgramName>Notepad#</ProgramName>
 </root>

@@ -8,7 +8,7 @@
     <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <widget-library name="../bin/Debug/Sharp-Updater-Linux.exe" internal="true" />
   </import>
-  <widget class="Gtk.Window" id="MainWindow" design-size="261 162">
+  <widget class="Gtk.Window" id="MainWindow" design-size="688 162">
     <property name="MemberName" />
     <property name="Events">ExposureMask, EnterNotifyMask</property>
     <property name="ExtensionEvents">All</property>
@@ -16,6 +16,7 @@
     <property name="WindowPosition">CenterOnParent</property>
     <property name="Resizable">False</property>
     <property name="AllowGrow">False</property>
+    <property name="AllowShrink">True</property>
     <property name="Gravity">Center</property>
     <child>
       <widget class="Gtk.Fixed" id="fixed1">
@@ -24,6 +25,7 @@
         <child>
           <widget class="Gtk.Label" id="label4">
             <property name="MemberName" />
+            <property name="LabelProp" translatable="yes" />
           </widget>
           <packing>
             <property name="X">10</property>
@@ -33,19 +35,11 @@
         <child>
           <widget class="Gtk.Label" id="label3">
             <property name="MemberName" />
+            <property name="LabelProp" translatable="yes" />
           </widget>
           <packing>
             <property name="X">10</property>
             <property name="Y">34</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="Gtk.ProgressBar" id="progressbar1">
-            <property name="MemberName" />
-          </widget>
-          <packing>
-            <property name="X">6</property>
-            <property name="Y">55</property>
           </packing>
         </child>
         <child>
@@ -116,6 +110,17 @@
           <packing>
             <property name="X">141</property>
             <property name="Y">85</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="label1">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">                                                                           </property>
+            <property name="UseUnderline">True</property>
+          </widget>
+          <packing>
+            <property name="X">13</property>
+            <property name="Y">61</property>
           </packing>
         </child>
       </widget>
