@@ -4,7 +4,8 @@ Changelog
 v1.3
 - Change 'cversion' and 'newversion' from string to double. Now Sharp-Updater is more accurate when detecting new versions of software.
 - Writing a simple tutorial on how to implement Sharp-Updater's updating method into programs to mimic Firefox's "About Window Updater"
-- Linux version only: Replaced progress bar with a label that simply says how much of the installer has been downloaded out of the actually size in KB.
+- Linux version only: Replaced progress bar with a label that simply says how much of the installer has been downloaded out of the 
+actually size in KB.
 
 v1.2
 - Add support for non-exe installlers.
