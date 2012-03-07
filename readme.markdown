@@ -11,8 +11,6 @@ Sharp-Updater-Linux is now avaliable. It works exactly the same as the Windows v
 3. You'll need [MonoDevelop](http://monodevelop.com/) and [GTK#](http://www.mono-project.com/GtkSharp) to compile from source
 
 Other than that, it uses the same XML Files and Nodes as the Windows version. So, have fun!
-	
-Sharp-Updater-Linux Progress: 90% Done, Usable
 
 ## Source Version:
 
