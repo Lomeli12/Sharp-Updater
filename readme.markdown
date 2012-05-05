@@ -14,7 +14,7 @@ Other than that, it uses the same XML Files and Nodes as the Windows version. So
 
 ## Source Version:
 
-Version: 1.3
+Version: 1.4
 
 ## Credits & License:
 

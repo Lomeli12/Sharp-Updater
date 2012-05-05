@@ -1,6 +1,9 @@
 Changelog
 
 11/18/2011 Linux Version created
+v1.4
+- Made some changes to the webclient so that you can cancel updates and delete the incomplete update.
+
 v1.3
 - Change 'cversion' and 'newversion' from string to double. Now Sharp-Updater is more accurate when detecting new versions of software.
 - Writing a simple tutorial on how to implement Sharp-Updater's updating method into programs to mimic Firefox's "About Window Updater"
