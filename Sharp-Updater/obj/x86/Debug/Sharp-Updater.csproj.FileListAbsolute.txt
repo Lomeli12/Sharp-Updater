@@ -7,3 +7,13 @@ c:\users\anthony\documents\visual studio 2010\Projects\C#\Sharp-Updater\obj\x86\
 C:\Users\Anthony\documents\visual studio 2010\Projects\C#\Sharp-Updater\bin\Debug\Sharp-Updater.exe.config
 C:\Users\Anthony\Documents\Visual Studio 2010\Projects\C#\Sharp-Updater\obj\x86\Debug\Sharp-Updater.csprojResolveAssemblyReference.cache
 C:\Users\Anthony\Documents\Visual Studio 2010\Projects\C#\Sharp-Updater\obj\x86\Debug\Sharp-Updater.csproj.GenerateResource.Cache
+C:\Users\Anthony\Documents\Visual Studio 2010\Projects\Sharp-Updater\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Anthony\Documents\Visual Studio 2010\Projects\Sharp-Updater\obj\x86\Debug\Sharp_Updater.Form1.resources
+C:\Users\Anthony\Documents\Visual Studio 2010\Projects\Sharp-Updater\obj\x86\Debug\Sharp_Updater.Properties.Resources.resources
+C:\Users\Anthony\Documents\Visual Studio 2010\Projects\Sharp-Updater\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\Anthony\Documents\Visual Studio 2010\Projects\Sharp-Updater\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Users\Anthony\Documents\Visual Studio 2010\Projects\Sharp-Updater\obj\x86\Debug\Sharp-Updater.exe
+C:\Users\Anthony\Documents\Visual Studio 2010\Projects\Sharp-Updater\bin\Debug\Sharp-Updater.exe.config
+C:\Users\Anthony\Documents\Visual Studio 2010\Projects\Sharp-Updater\bin\Debug\Sharp-Updater.exe
+C:\Users\Anthony\Documents\Visual Studio 2010\Projects\Sharp-Updater\bin\Debug\Sharp-Updater.pdb
+C:\Users\Anthony\Documents\Visual Studio 2010\Projects\Sharp-Updater\obj\x86\Debug\Sharp-Updater.pdb
